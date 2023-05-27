@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './components/header'
+import MainMenu from '../Layout/MainMenu/MainMenu'
 
 const App = () => {
   return (
     <>
-    <Header></Header>
+      <MainMenu></MainMenu>
     </>
     )
 }
