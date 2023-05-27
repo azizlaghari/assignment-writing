@@ -9,6 +9,7 @@ import { FiUsers } from "react-icons/fi";
 import { RiDashboardLine } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
 const MainMenu = () => {
@@ -17,6 +18,7 @@ const MainMenu = () => {
         token: { colorBgContainer },
     } = theme.useToken();
     return (
+        
         <Layout>
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical" />
@@ -31,28 +33,28 @@ const MainMenu = () => {
                     }}
                     items={[
                         {
-                          key: 'dashboard',
-                          icon: <RiDashboardLine />,
-                          label: 'Dashboard',
+                            key: 'dashboard',
+                            icon: <RiDashboardLine />,
+                            label: <Link to="/">Dashboard</Link>,
                         },
                         {
-                          key: 'orders',
-                          icon: <HiOutlineShoppingBag />,
-                          label: 'Orders',
+                            key: 'orders',
+                            icon: <HiOutlineShoppingBag />,
+                            label: <Link to="/orders">Orders</Link>,
                         },
                         {
-                          key: 'products',
-                          icon: <AiOutlineShoppingCart />,
-                          label: 'Products',
+                            key: 'products',
+                            icon: <AiOutlineShoppingCart />,
+                            label: <Link to="/products">Products</Link>,
                         },
                         {
                             key: 'customers',
                             icon: <FiUsers />,
-                            label: 'Customers',
-                          },
-                      ]}
-                />
+                            label: <Link to="/customers">Customers</Link>,
+                        },
+                    ]}
                     
+                />
 
             </Sider>
             <Layout>

@@ -1,10 +1,11 @@
 import React from 'react'
 import MainMenu from '../Layout/MainMenu/MainMenu'
+import Routers from './Routers'
 
 const App = () => {
   return (
     <>
-      <MainMenu></MainMenu>
+        <Routers></Routers>
     </>
     )
 }
