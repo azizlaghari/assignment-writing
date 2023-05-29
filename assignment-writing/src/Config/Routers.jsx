@@ -13,7 +13,7 @@ function Routers() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route  path="/" element={<MainMenu/>} />
+                    {/* <Route  path="/" element={<MainMenu/>} /> */}
                     <Route index path="dashboard" element={<Dashboard/>} />
                     <Route  path="login" element={<Login/>} />
                     <Route  path="orders" element={<Orders/>} />
