@@ -6,20 +6,21 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 
-const MainMenu = () => {
+const MainMenu = ({active}) => {
+    const { SubMenu } = Menu;
     const {
         token: { colorBgContainer },
     } = theme.useToken();
     return (
         <Menu
-            theme="dark"
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            style={{
-                height: "100vh",
-                background: "var(--sidebar)",
-                paddingTop: "30px",
-            }}
+        theme="dark"
+        mode={"inline"}
+        defaultSelectedKeys={active ? active : "dashboard"}
+        style={{
+          height: "100vh",
+          background: "var(--sidebar)",
+          paddingTop: "30px",
+        }}
             items={[
                 {
                     key: 'dashboard',

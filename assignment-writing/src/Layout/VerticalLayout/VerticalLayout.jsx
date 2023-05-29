@@ -27,7 +27,7 @@ const VerticalLayout = ({ children, active }) => {
                         left: 0,
                         top: 0,
                         bottom: 0,
-                        background: "var(--white)",
+                        background: "#828b6b",
                     }}
                 >
                     <div className="demo-logo-vertical" />
@@ -46,10 +46,11 @@ const VerticalLayout = ({ children, active }) => {
                             zIndex: 1,
                             position: "fixed",
                             width: "100%",
+                            backgroundColor: "#828b6b"
                         }}
                         className="header-row"
                     >
-                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <div style={{backgroundColor: "#828b6b", display: "flex", alignItems: "center" ,width: "100%", }}>
                             {React.createElement(
                                 collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
                                 {

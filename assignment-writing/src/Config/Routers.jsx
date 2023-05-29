@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Orders from "../Views/Orders/Orders";
 import ProductList from "../Views/Product/Product";
-import Customer from "../Views/Customers/Customers";
 import Login from "../Views/Login/Login";
 import Dashboard from "../Views/Dashboard/Dashboard";
 import MainMenu from "../Layout/MainMenu/MainMenu";
+import Customers from "../Views/Customers/Customers";
 
 function Routers() {
     // console.log("isAdmin", isAdmin);
@@ -14,11 +14,11 @@ function Routers() {
             <BrowserRouter>
                 <Routes>
                     {/* <Route  path="/" element={<MainMenu/>} /> */}
-                    <Route index path="dashboard" element={<Dashboard/>} />
+                    <Route exact path="/" element={<Dashboard/>} />
                     <Route  path="login" element={<Login/>} />
                     <Route  path="orders" element={<Orders/>} />
                     <Route  path="products" element={<ProductList/>} />
-                    <Route  path="customers" element={<Customer/>} />
+                    <Route  path="customers" element={<Customers/>} />
                 </Routes>
             </BrowserRouter>
         </>
