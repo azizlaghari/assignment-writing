@@ -19,7 +19,7 @@ const Customers = () => {
             <Button
               icon={<PlusOutlined />}
               className="secondary-btn"
-              style={{ marginRight: "10px" }}
+              style={{ margin: "1rem" }}
             >
               Add Customer
             </Button>
