@@ -1,8 +1,9 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   var id = localStorage.getItem("LoggedIn");
+  const navigate = useNavigate();
 
   return (
     <Route
@@ -11,7 +12,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         id && localStorage.hasOwnProperty("LoggedIn") ? (
           <Component {...props} />
         ) : (
-          <Redirect to="/login" />
+          navigate ("/login")
         )
       }
     />

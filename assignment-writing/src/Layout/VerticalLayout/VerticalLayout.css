@@ -121,3 +121,12 @@
     display: none;
   }
 }
+.logout{
+  z-index: 2;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}

@@ -13,7 +13,6 @@ function Routers() {
         <>
             <BrowserRouter>
                 <Routes>
-                    {/* <Route  path="/" element={<MainMenu/>} /> */}
                     <Route exact path="/" element={<Dashboard/>} />
                     <Route  path="login" element={<Login/>} />
                     <Route  path="orders" element={<Orders/>} />

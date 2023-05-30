@@ -1,21 +1,38 @@
 import React, { useState } from "react";
-import { Layout } from "antd";
+import { Dropdown, Layout, Menu } from "antd";
+import { IoIosArrowDown } from "react-icons/io";
 import {
+    LogoutOutlined,
     MenuUnfoldOutlined,
     MenuFoldOutlined,
 } from "@ant-design/icons";
-
+import { useNavigate } from "react-router-dom";
 import MainMenu from "../MainMenu/MainMenu";
 import './VerticalLayout.css'
+import Item from "antd/es/list/Item";
 
 const VerticalLayout = ({ children, active }) => {
     const { Header, Sider, Content } = Layout;
+    const navigate = useNavigate();
 
     // toggle
     const [collapsed, setCollapsed] = useState(false);
     const toggle = () => {
         setCollapsed(!collapsed);
     };
+    const performSignOut = () => {
+        localStorage.clear();
+        navigate.push("/login");
+    };
+
+
+    const menu = (
+        <Menu>
+            <Menu.Item icon={<LogoutOutlined />} onClick={performSignOut}>
+                Logout
+            </Menu.Item>
+        </Menu>
+    );
     return (
         <>
             <Layout>
@@ -50,7 +67,7 @@ const VerticalLayout = ({ children, active }) => {
                         }}
                         className="header-row"
                     >
-                        <div style={{backgroundColor: "#828b6b", display: "flex", alignItems: "center" ,width: "100%", }}>
+                        <div style={{ backgroundColor: "#828b6b", display: "flex", alignItems: "center", width: "100%", }}>
                             {React.createElement(
                                 collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
                                 {
@@ -61,7 +78,19 @@ const VerticalLayout = ({ children, active }) => {
                             <h3 style={{ color: 'white' }}> AL Izzah Electric Sanitary and Paint </h3>
 
                         </div>
+
                     </Header>
+                    <div className="logout">
+                        <Dropdown
+                            menu={menu}
+                            trigger={["click"]}
+                            placement={"bottomLeft"}
+                        >
+                            <span className="header-action">
+                                <IoIosArrowDown />
+                            </span>
+                        </Dropdown>
+                    </div>
                     <Content
                         style={{ padding: "24px", height: "auto" }}
                     >

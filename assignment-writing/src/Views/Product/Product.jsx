@@ -11,7 +11,7 @@ const Product = () => {
   return (
     <Layout active="Product">
       <div className="PL-container Container">
-        <h2 className="heading">Product List</h2>
+        <h2 className="heading" style={{ margin: "1rem", color: "#000" }}>Product List</h2>
         <div className="Actions-div">
           <br />
 
