@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Button, Radio, Input, Typography, Form, notification } from "antd";
+import { Button, Input, Typography, Form, notification } from "antd";
 import { useNavigate } from "react-router-dom";
-import Item from "antd/es/list/Item";
-
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,13 +11,13 @@ const Login = () => {
     password: '12345678'
   }
 
-  const Login = async (values) => {
+  const handleLogin = async (values) => {
     setLoading(true);
     if (values.email === AdminCredential.email && values.password === AdminCredential.password) {
       await localStorage.setItem("LoggedIn", true)
-      navigate.push("/")
+      navigate.push("/");
       notification.success({
-        message: 'Login Succussfully!!',
+        message: 'Login Successfully!!',
         duration: 3
       })
     } else {
@@ -33,7 +31,8 @@ const Login = () => {
   };
 
   if (localStorage.hasOwnProperty("LoggedIn")) {
-    return navigate("/");
+    navigate("/");
+    return null; // Return null instead of using return within the function body
   } else {
     return (
       <div className="temp-login-main">
@@ -42,23 +41,23 @@ const Login = () => {
           <Typography.Title level={2}>
             Login to your account
           </Typography.Title>
-          <Form layout="vertical" onFinish={Login}>
-            <Item
+          <Form layout="vertical" onFinish={handleLogin}>
+            <Form.Item
               name="email"
               label="Email"
               rules={[
                 {
                   type: "email",
-                  message: "The input is not valid E-mail!",
+                  message: "The input is not a valid email!",
                 },
                 {
                   required: true,
-                  message: "Please input your E-mail!",
+                  message: "Please input your email!",
                 },
               ]}
             >
               <Input className="primary-input" />
-            </Item>
+            </Form.Item>
             <Form.Item
               name="password"
               label="Password"
@@ -93,11 +92,10 @@ const Login = () => {
               </Button>
             </Form.Item>
           </Form>
-
         </div>
       </div>
-    );
-  };
-};
+    )
+  }
+}
 
 export default Login;

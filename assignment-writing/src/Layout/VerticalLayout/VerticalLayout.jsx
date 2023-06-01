@@ -9,7 +9,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import MainMenu from "../MainMenu/MainMenu";
 import './VerticalLayout.css'
-import Item from "antd/es/list/Item";
 
 const VerticalLayout = ({ children, active }) => {
     const { Header, Sider, Content } = Layout;
@@ -34,7 +33,7 @@ const VerticalLayout = ({ children, active }) => {
         </Menu>
     );
     return (
-        <>
+        <div>
             <Layout>
                 <Sider trigger={null} collapsible collapsed={collapsed}
                     width={250}
@@ -48,7 +47,9 @@ const VerticalLayout = ({ children, active }) => {
                     }}
                 >
                     <div className="demo-logo-vertical" />
+                    <div className="Main_Menu">
                     <MainMenu active={active} />
+                    </div>
                 </Sider>
                 <Layout className="site-layout"
                     style={{
@@ -82,7 +83,7 @@ const VerticalLayout = ({ children, active }) => {
                     </Header>
                     <div className="logout">
                         <Dropdown
-                            menu={menu}
+                            menu={{menu}}
                             trigger={["click"]}
                             placement={"bottomLeft"}
                         >
@@ -98,7 +99,7 @@ const VerticalLayout = ({ children, active }) => {
                     </Content>
                 </Layout>
             </Layout>
-        </>
+        </div>
     )
 }
 
