@@ -15,7 +15,7 @@ const Login = () => {
     setLoading(true);
     if (values.email === AdminCredential.email && values.password === AdminCredential.password) {
       await localStorage.setItem("LoggedIn", true)
-      navigate.push("/");
+      navigate("/");
       notification.success({
         message: 'Login Successfully!!',
         duration: 3
