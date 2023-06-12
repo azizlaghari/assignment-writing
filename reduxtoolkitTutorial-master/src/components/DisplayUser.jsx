@@ -6,8 +6,15 @@ const DisplayUser = () => {
     return state.users;
   });
   console.log(data);
-
-  return <div>hi</div>;
+  return (
+    <div>
+      {data.map((user, id) => {
+        return (
+          <li key={id}>{user}</li>
+        );
+      })}
+    </div>
+  );
 };
 
 export default DisplayUser;
