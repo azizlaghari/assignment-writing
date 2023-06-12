@@ -12,6 +12,6 @@ const usersSlice = createSlice({
         deleteUsers(state, action) { },
     },
 });
-// console.log(usersSlice.actions);
+console.log(usersSlice.actions);
 export default usersSlice.reducer;
 export const { addUser } = usersSlice.actions;
