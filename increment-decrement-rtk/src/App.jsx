@@ -10,8 +10,8 @@ function App() {
   return (
     <div>
       <h1>Counter: {counter}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button type='button' className='btn btn-primary' onClick={() => dispatch(increment())}>Increment</button>
+      <button type='button' className='btn btn-danger' onClick={() => dispatch(decrement())}>Decrement</button>
     </div>
   );
 };
