@@ -1,0 +1,86 @@
+/* Add CSS here */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: rgb(130, 0, 216);
+  --small-text: 10px;
+  --sec-text: 12px;
+  --other-text: 14px;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--other-text);
+  background-color: #ddd;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  height: 410px;
+  box-shadow: 0 0 5px #0001, 0 0 1px 8px #eee;
+  border-radius: 20px;
+}
+
+.challenges {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.challenge {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 4px;
+  transition: all 0.4s;
+  border-radius: 10px;
+
+}
+.challenge:hover {
+  box-shadow: 0 2px 5px #0005;
+  transform: translateY(-0.7px);
+}
+.challenges img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.chall-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.chall-text :first-child {
+  grid-column: 1/3;
+}
+.chall-text :nth-child(3) {
+  grid-row: 3/4;
+}
+.chall-text :not(:first-child) {
+  font-size: var(--small-text);
+}
+.challenge button {
+  background-color: var(--purple);
+  color: white;
+  padding: 0 9px;
+  height: 22px;
+  font-size: var(--sec-text);
+  border-radius: 3px;
+  align-self: center;
+  transition: all 0.3s;
+  box-shadow: 0 1px 3px #0003;
+}
+.challenge button:hover {
+  transform: translateY(-0.4px);
+  box-shadow: 0 1px 2px var(--purple);
+  opacity: 0.8;
+}
