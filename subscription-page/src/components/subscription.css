@@ -52,9 +52,12 @@ main {
     height: 100px;
     width: 100px;
     border-radius: 100%;
+    flex: 1;
+    margin: 0 2rem;
 }
 .cards{
   margin-top: 2rem;
+  display: flex;
 }
 .content-btn{
   background-color: var(--bg-view-content-btn);
