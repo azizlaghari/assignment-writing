@@ -48,18 +48,18 @@ main {
   border-radius: 25px;
   position: relative;
 }
-.card img{
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    flex: 1;
-    margin: 0 2rem;
+.card img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  flex: 1;
+  margin: 0 2rem;
 }
-.cards{
+.cards {
   margin-top: 2rem;
   display: flex;
 }
-.content-btn{
+.content-btn {
   background-color: var(--bg-view-content-btn);
   color: var(--bg-body);
   padding: 1rem;
