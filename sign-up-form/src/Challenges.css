@@ -5,7 +5,7 @@
 }
 
 :root {
-  --purple: rgb(130, 0, 216);
+  --purple: #8200d8;
   --small-text: 10px;
   --sec-text: 12px;
   --other-text: 14px;
@@ -18,7 +18,8 @@ html {
   justify-content: center;
   align-items: center;
   font-size: var(--other-text);
-  background-color: #ddd;
+  background-color: #7408bc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -78,6 +79,7 @@ html {
   align-self: center;
   transition: all 0.3s;
   box-shadow: 0 1px 3px #0003;
+  cursor: pointer;
 }
 .challenge button:hover {
   transform: translateY(-0.4px);
