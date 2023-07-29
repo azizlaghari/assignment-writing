@@ -1,8 +1,11 @@
 import React from 'react'
+import Subscription from './components/subscription'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+        <Subscription></Subscription>
+    </div>
   )
 }
 

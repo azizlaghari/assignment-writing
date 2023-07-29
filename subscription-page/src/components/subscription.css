@@ -1,0 +1,50 @@
+:root {
+  --bg-body: #f3f2fa;
+  --bg-main-pseudo-el: #1d1d4f;
+  --bg-main: #ffffff;
+  --bg-links: #f3f1fb;
+  --bg-view-content-btn: #1d1d4f;
+  --color-font: #1d1d4f;
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Lisu Bosa", serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-body);
+  color: var(--color-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p,
+button {
+  font-family: var(--font-family-primary);
+}
+button {
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+button:hover {
+  background-color: var(--color-font);
+  color: var(--bg-body);
+}
+
+main {
+  width: 1100px;
+}
+.subscriptions_section {
+  background: var(--bg-main);
+  padding: 65px;
+  text-align: center;
+  border-radius: 25px;
+  position: relative;
+}
