@@ -17,6 +17,26 @@ const Subscription = () => {
           <button title="Source files"><FiPaperclip></FiPaperclip>Source files</button>
           <button title="Live Streams"><FiCast></FiCast>Live Streams</button>
           <button title="Meetup"><FiCalendar></FiCalendar>Meetup</button>
+          <div className="cards">
+            <div className="card">
+              <img src="https://source.unsplash.com/featured?man-face-portrait" alt="" />
+              <h2>Abdul</h2>
+              <p>Job Title</p>
+              <button className="content-btn">View content</button>
+            </div>
+            <div className="card">
+              <img src="https://source.unsplash.com/featured?woman-face-portrait" alt="" />
+              <h2>Cendece</h2>
+              <p>Job Title</p>
+              <button className="content-btn">View content</button>
+            </div>
+            <div className="card">
+              <img src="https://source.unsplash.com/featured?face-portrait" alt="" />
+              <h2>Messi</h2>
+              <p>Job Title</p>
+              <button className="content-btn">View content</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

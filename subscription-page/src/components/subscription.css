@@ -48,3 +48,16 @@ main {
   border-radius: 25px;
   position: relative;
 }
+.card img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+.cards{
+  margin-top: 2rem;
+}
+.content-btn{
+  background-color: var(--bg-view-content-btn);
+  color: var(--bg-body);
+  padding: 1rem;
+}
